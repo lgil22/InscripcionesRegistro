@@ -520,6 +520,7 @@ namespace InscripcionesEstudiantes.UI
             }
             else
             {
+                MessageBox.Show("No Eliminado, Id No Existe");
                 errorProvider.SetError(IDnumericUpDown, "No se puede eliminar una persona que no existe");
                 errorProvider.Clear();
                 Limpiar();
