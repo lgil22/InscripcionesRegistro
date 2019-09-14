@@ -10,7 +10,7 @@ using System.Linq.Expressions;
 
 namespace InscripcionesEstudiantes.BLL
 {
-    class EstudiantesBLL
+   public class EstudiantesBLL
     {
         public static bool Guardar(Estudiantes estudiante)
         {
