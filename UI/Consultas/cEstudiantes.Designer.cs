@@ -148,6 +148,7 @@
             this.Controls.Add(this.Hastalabel2);
             this.Controls.Add(this.Desdelabel1);
             this.Controls.Add(this.ConsultadataGridView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "cEstudiantes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

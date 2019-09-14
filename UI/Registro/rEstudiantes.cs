@@ -394,6 +394,7 @@ namespace InscripcionesEstudiantes.UI
             this.Controls.Add(this.Nombrelabel3);
             this.Controls.Add(this.Matriculalabel2);
             this.Controls.Add(this.Idlabel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "rEstudiantes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

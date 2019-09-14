@@ -28,7 +28,6 @@ namespace InscripcionesEstudiantes.UI
 
             //TraerBalance();
         }
-
         private void FormatoMoneda(object sender , ConvertEventArgs e)
         {
             double valor = 0;
@@ -53,7 +52,6 @@ namespace InscripcionesEstudiantes.UI
                 BalanceTextBox.Text = item.Balance.ToString();
             }
         }
-
 
         private void Limpiar()
         {
@@ -189,9 +187,7 @@ namespace InscripcionesEstudiantes.UI
         {
             int id = Convert.ToInt32(InscripnumericUpDown1.Value);
             Inscripciones inscripcion = InscripcionesBLL.Buscar(id);
-
-
-
+            
             if (inscripcion != null)
             {
                 //MessageBox.Show("Estudiante Encontrado");

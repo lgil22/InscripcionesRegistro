@@ -174,7 +174,7 @@
             // 
             this.ElimiarButton.Image = ((System.Drawing.Image)(resources.GetObject("ElimiarButton.Image")));
             this.ElimiarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ElimiarButton.Location = new System.Drawing.Point(291, 411);
+            this.ElimiarButton.Location = new System.Drawing.Point(291, 410);
             this.ElimiarButton.Name = "ElimiarButton";
             this.ElimiarButton.Size = new System.Drawing.Size(84, 41);
             this.ElimiarButton.TabIndex = 30;
@@ -213,7 +213,7 @@
             // 
             this.Buscarbutton1.Image = ((System.Drawing.Image)(resources.GetObject("Buscarbutton1.Image")));
             this.Buscarbutton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscarbutton1.Location = new System.Drawing.Point(273, 33);
+            this.Buscarbutton1.Location = new System.Drawing.Point(291, 33);
             this.Buscarbutton1.Name = "Buscarbutton1";
             this.Buscarbutton1.Size = new System.Drawing.Size(84, 38);
             this.Buscarbutton1.TabIndex = 31;
@@ -226,7 +226,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(429, 472);
+            this.ClientSize = new System.Drawing.Size(419, 472);
             this.Controls.Add(this.Buscarbutton1);
             this.Controls.Add(this.ElimiarButton);
             this.Controls.Add(this.GuardarButton);
@@ -245,8 +245,11 @@
             this.Controls.Add(this.ComentariostextBox1);
             this.Controls.Add(this.Fechalabel1);
             this.Controls.Add(this.FechaDateTimePicker);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "rInscripciones";
-            this.Text = "rInscripciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Inscripciones Estudiante";
             ((System.ComponentModel.ISupportInitialize)(this.InscripnumericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
