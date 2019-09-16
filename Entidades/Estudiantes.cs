@@ -23,7 +23,6 @@ namespace InscripcionesEstudiantes.Entidades
         public DateTime FechaNacimiento { get; set; }
         public decimal Balance { get; set; }
 
-
         public Estudiantes()
         {
             EstudianteId = 0;

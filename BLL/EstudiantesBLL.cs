@@ -94,13 +94,6 @@ namespace InscripcionesEstudiantes.BLL
             try
             {
                 estudiante = db.Estudiantes.Find(id);
-                // El Count() lo que hace es engañar al lazyloading y obligarlo a cargar los detalles 
-                //  estudiante.Telefono.Count();
-
-                //persona = db.Personas
-                //     .Include(x => x.Telefonos.Select(c => c.PersonaId))
-                //             .Where(p => p.PersonaId == id)
-                //             .FirstOrDefault();
             }
             catch (Exception)
             {

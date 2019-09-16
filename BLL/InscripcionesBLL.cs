@@ -45,14 +45,6 @@ namespace InscripcionesEstudiantes.BLL
 
             try
             {
-                //buscar las entidades que no estan para removerlas
-                /*var Anterior = db.Estudiantes.Find(estudiante.EstudianteId);
-                foreach (var item in Anterior.Telefono)
-                {
-                    if (!estudiante.Telefono.ToList().Exists(d => d.Id == item.Id))
-                        db.Entry(item).State = EntityState.Deleted;
-                }*/
-
                 Inscripciones ant = InscripcionesBLL.Buscar(inscripcion.InscripcionId);
 
                 decimal cambio = inscripcion.Monto - ant.Monto;
@@ -60,7 +52,6 @@ namespace InscripcionesEstudiantes.BLL
                 var est = db.Estudiantes.Find(inscripcion.EstudianteId);
                 est.Balance += cambio;
                 EstudiantesBLL.Modificar(est);
-
 
                 db.Entry(inscripcion).State = EntityState.Modified;
                 paso = (db.SaveChanges() > 0);
@@ -108,13 +99,7 @@ namespace InscripcionesEstudiantes.BLL
             try
             {
                 inscripcion = db.Inscripciones.Find(id);
-                // El Count() lo que hace es engañar al lazyloading y obligarlo a cargar los detalles 
-                //  estudiante.Telefono.Count();
-
-                //persona = db.Personas
-                //     .Include(x => x.Telefonos.Select(c => c.PersonaId))
-                //             .Where(p => p.PersonaId == id)
-                //             .FirstOrDefault();
+            
             }
             catch (Exception)
             {
@@ -145,8 +130,6 @@ namespace InscripcionesEstudiantes.BLL
             }
             return Lista;
         }
-
-
 
     }
 }

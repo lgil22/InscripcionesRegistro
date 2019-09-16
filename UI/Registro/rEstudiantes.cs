@@ -60,8 +60,6 @@ namespace InscripcionesEstudiantes.UI
             return retorno;
         }
 
-
-
         private void LlenaCampo(Estudiantes estudiante)
         {
             IDnumericUpDown.Value = estudiante.EstudianteId;
@@ -75,8 +73,6 @@ namespace InscripcionesEstudiantes.UI
             EmailtextBox4.Text = estudiante.Email;
             SexocomboBox.Text = estudiante.Sexo;
             BalancetextBox5.Text = estudiante.Balance.ToString();
-
-            // CargarGrid();
         }
 
         private void InitializeComponent()
@@ -407,7 +403,6 @@ namespace InscripcionesEstudiantes.UI
 
         }
 
-
         private void REstudiantes_Load(object sender, EventArgs e)
         {
 
@@ -528,26 +523,26 @@ namespace InscripcionesEstudiantes.UI
             }
 
 
-            //int id;
-            //int.TryParse(IDnumericUpDown.Text, out id);
+           int id;
+           int.TryParse(IDnumericUpDown.Text, out id);
 
 
-            //if (IDnumericUpDown.Value == 0)
-            //{
-            //    MessageBox.Show("Esta Vacio");
+            if (IDnumericUpDown.Value == 0)
+            {
+               MessageBox.Show("Esta Vacio");
 
-            //}
-            //else if (EstudiantesBLL.Eliminar(id))
-            //{
-            //    MessageBox.Show("Eliminado");
-            //    Limpiar();
-            //}
-            //else
-            //{
-            //    errorProvider.SetError(IDnumericUpDown, "No se puede eliminar una persona que no existe");
-            //    errorProvider.Clear();
-            //    Limpiar();
-            //}
+            }
+            else if (EstudiantesBLL.Eliminar(id))
+             {
+              MessageBox.Show("Eliminado");
+               Limpiar();
+            }
+            else
+            {
+             errorProvider.SetError(IDnumericUpDown, "No se puede eliminar una persona que no existe");
+             errorProvider.Clear();
+               Limpiar();
+            }
         }
 
         private void Nuevobutton2_Click(object sender, EventArgs e)

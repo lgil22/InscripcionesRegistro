@@ -19,7 +19,7 @@ namespace InscripcionesEstudiantes.UI
             InitializeComponent();
             LlenarComboBox();
         }
-
+        //Muestra el nombre del estudiante y guardar id estudiante.....
         private void LlenarComboBox()
         {
             EstudianteComboBox.DataSource = EstudiantesBLL.GetList(x => true);
@@ -28,6 +28,7 @@ namespace InscripcionesEstudiantes.UI
 
             //TraerBalance();
         }
+        // Especifica el formato de moneda y convierte un número en una cadena que representa una cantidad de moneda.....
         private void FormatoMoneda(object sender , ConvertEventArgs e)
         {
             double valor = 0;
@@ -35,6 +36,7 @@ namespace InscripcionesEstudiantes.UI
             e.Value = valor.ToString("#,##.00;(#,##.00);0.00");
         }
 
+        // Metodo para llevar balance a tipo moneda y presentarlo en pantalla.....
         private void CambiarBalance()
         {
             BalanceTextBox.DataBindings.Clear();
@@ -62,29 +64,8 @@ namespace InscripcionesEstudiantes.UI
             DepositotextBox3.Clear();
             BalanceTextBox.Clear();
             CambiarBalance();
-
-            //errorProvider.Clear();*/
         }
-        /*private Inscripciones LlenaClase()
-         {
-          Inscripciones inscripciones = new Inscripciones();
-         estudiante.Id = Convert.ToInt32(IDnumericUpDown.Value);
-         estudiante.Matricula = MatriculamaskedTextBox1.Text;
-         estudiante.Nombre = NombretextBox1.Text;
-         estudiante.Apellidos = ApellidostextBox2.Text;
-         estudiante.Telefono = TelefonomaskedTextBox3.Text;
-         estudiante.Cedula = CedulamaskedTextBox4.Text;
-         estudiante.FechaNacimiento = dateTimePicker.Value;
-         estudiante.Direccion = DirecciontextBox3.Text;
-         estudiante.Email = EmailtextBox4.Text;
-         estudiante.Sexo = SexocomboBox.Text;
-         estudiante.Balance = Convert.ToDecimal(BalancetextBox5.Text);
-
-         return estudiante;
-
-
-               }*/
-
+ 
         private Inscripciones LlenaClase()
         {
             return new Inscripciones()
@@ -145,7 +126,7 @@ namespace InscripcionesEstudiantes.UI
             else
             {
                 inscripcion = LlenaClase();
-                if (InscripcionesBLL.Modificar(inscripcion))
+                if (InscripcionesBLL.Modificar(inscripcion))  /// Metodo para modificar informacion de algun estudiante.....
                 {
                     MessageBox.Show("Modificado", "Realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Limpiar();
@@ -219,8 +200,6 @@ namespace InscripcionesEstudiantes.UI
         }
     }
 
-
-    // CargarGrid();
 }
 
 
